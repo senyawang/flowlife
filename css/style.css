@@ -1138,12 +1138,12 @@ article .article-content table th {
   font-weight: bold;
   border-bottom: 2px solid #dbdbdb;
   padding: 0.5em;
-  line-height: 1.3em;
+  line-height: 2;
 }
 article .article-content table td {
   border-bottom: 1px solid #dbdbdb;
   padding: 0.5em;
-  line-height: 1.3em;
+  line-height: 2;
 }
 article .article-content .pullquote {
   text-align: left;
