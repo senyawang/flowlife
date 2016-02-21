@@ -875,6 +875,7 @@ header nav ul li a:hover {
   }
 }
 article header.article-info >h1 {
+  float: left;
   padding: 0.2em 3%;
   font-size: 170%;
   line-height: 1.5;
