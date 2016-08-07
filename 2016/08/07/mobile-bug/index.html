@@ -4,26 +4,35 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>css 3D box | 令昔</title>
+    <title>央视网商城移动端改版遇到的那些坑 | 令昔</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="令昔">
     
 
     
-    <meta name="description" content="客官请稍等，codepen 资源加载较慢，原因你懂的。。。。
-See the Pen QjVdeg by 令昔 (@senyawang) on CodePen.">
+    <meta name="description" content="1, fixed header 在页面滚动的时候会跟随页面一起滚动，到页面滚动停止之后，重新回到fixed的位置
+将fixed元素放在页面底部
+2，fixed footer 中有input  focus 时 位置发生变化
+focus时
+                $(&amp;apos;body,html&amp;apos;).css({&amp;apos;overflow&amp;apos;:&amp;apos;hidden&amp;ap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css 3D box">
-<meta property="og:url" content="http://flowlife.cn/flowlife/2016/03/08/css-3D-box/index.html">
+<meta property="og:title" content="央视网商城移动端改版遇到的那些坑">
+<meta property="og:url" content="http://flowlife.cn/flowlife/2016/08/07/mobile-bug/index.html">
 <meta property="og:site_name" content="令昔">
-<meta property="og:description" content="客官请稍等，codepen 资源加载较慢，原因你懂的。。。。
-See the Pen QjVdeg by 令昔 (@senyawang) on CodePen.">
-<meta property="og:updated_time" content="2016-03-08T04:24:28.000Z">
+<meta property="og:description" content="1, fixed header 在页面滚动的时候会跟随页面一起滚动，到页面滚动停止之后，重新回到fixed的位置
+将fixed元素放在页面底部
+2，fixed footer 中有input  focus 时 位置发生变化
+focus时
+                $(&amp;apos;body,html&amp;apos;).css({&amp;apos;overflow&amp;apos;:&amp;apos;hidden&amp;ap">
+<meta property="og:updated_time" content="2016-08-07T09:14:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css 3D box">
-<meta name="twitter:description" content="客官请稍等，codepen 资源加载较慢，原因你懂的。。。。
-See the Pen QjVdeg by 令昔 (@senyawang) on CodePen.">
+<meta name="twitter:title" content="央视网商城移动端改版遇到的那些坑">
+<meta name="twitter:description" content="1, fixed header 在页面滚动的时候会跟随页面一起滚动，到页面滚动停止之后，重新回到fixed的位置
+将fixed元素放在页面底部
+2，fixed footer 中有input  focus 时 位置发生变化
+focus时
+                $(&amp;apos;body,html&amp;apos;).css({&amp;apos;overflow&amp;apos;:&amp;apos;hidden&amp;ap">
 
     
     <link rel="alternative" href="/atom.xml" title="令昔" type="application/atom+xml">
@@ -82,14 +91,14 @@ See the Pen QjVdeg by 令昔 (@senyawang) on CodePen.">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/03/08/css-3D-box/" title="css 3D box" itemprop="url">css 3D box</a>
+      <a href="/2016/08/07/mobile-bug/" title="央视网商城移动端改版遇到的那些坑" itemprop="url">央视网商城移动端改版遇到的那些坑</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="令昔" target="_blank" itemprop="author">令昔</a>
 		
   <p class="article-time">
-    <time datetime="2016-03-08T03:58:46.000Z" itemprop="datePublished"> 发表于 2016-03-08</time>
+    <time datetime="2016-08-07T09:12:19.000Z" itemprop="datePublished"> 发表于 2016-08-07</time>
     
   </p>
 </header>
@@ -102,9 +111,22 @@ See the Pen QjVdeg by 令昔 (@senyawang) on CodePen.">
 		
 		</div>
 		
-		<p>客官请稍等，codepen 资源加载较慢，原因你懂的。。。。</p>
-<p></p><p data-height="700" data-theme-id="0" data-slug-hash="QjVdeg" data-default-tab="result" data-user="senyawang" class="codepen">See the Pen <a href="http://codepen.io/senyawang/pen/QjVdeg/" target="_blank" rel="external">QjVdeg</a> by 令昔 (<a href="http://codepen.io/senyawang" target="_blank" rel="external">@senyawang</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>  
+		<p>1, fixed header 在页面滚动的时候会跟随页面一起滚动，到页面滚动停止之后，重新回到fixed的位置</p>
+<pre><code>将fixed元素放在页面底部
+</code></pre><p>2，fixed footer 中有input  focus 时 位置发生变化</p>
+<pre><code>focus时
+                $(&apos;body,html&apos;).css({&apos;overflow&apos;:&apos;hidden&apos;, &apos;position&apos;: &apos;relative&apos;, &apos;height&apos;: &apos;100%&apos;})
+        $(&apos;.fixed-input&apos;).css({&apos;position&apos;:&apos;absolute&apos;})
+
+blur 时 再还原样式
+</code></pre><p>3，通讯录效果中字母索引   -webkit-overflow-scrolling: touch;  在 ios中滑动字母索引时造成页面显示空白的问题</p>
+<p>4，一些android 浏览器中  行内元素 设置 flex 无效<br>    给父元素设置 display: inline-flex;</p>
+<p>5, 页面初始化时无法自动调起输入法键盘， 可以通过 传说中的点透bug 来实现这个效果，但前提是input在同一位置</p>
+<p>6，-webkit-line-clamp 出现省略号时的文字块高度和不出现省略 号时的高度不同<br>    需要设置固定高度，但是由于在移动端字体大小适配的问题，使高度无法固定，所以用 em 为高度单位设置 height: calc(2em <em> 1.5 )  行数</em>行高  其实可以算出以em为单位的一个基准值  </p>
+<p>7, ios 下 给body设置padding-top 来为 fixed  navbar 占位，如果body 同时设置了 -webkit-overlfow-scrolling: touch,   此时body的paddingTop 的内容会覆盖在fixed元素上面遮挡住navbar</p>
+<pre><code>虽然 给body 设置transform: translate3d(0, 0, 0); 可以解决这个问题，但是 如果是在复杂的页面中，有可能会引起其它的诡异问题，所以最好的解决办法是把navbar 放在页面结构的底部。
+transform 下的元素 fixed 失效，所以才解决了上面的问题，操，，真你妈烦。
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -116,7 +138,7 @@ See the Pen QjVdeg by 令昔 (@senyawang) on CodePen.">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://flowlife.cn/flowlife/2016/03/08/css-3D-box/" data-title="css 3D box | 令昔" data-tsina="null" class="share clearfix">
+	  <div data-url="http://flowlife.cn/flowlife/2016/08/07/mobile-bug/" data-title="央视网商城移动端改版遇到的那些坑 | 令昔" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -129,19 +151,11 @@ See the Pen QjVdeg by 令昔 (@senyawang) on CodePen.">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/08/07/mobile-bug/" title="央视网商城移动端改版遇到的那些坑">
-  <strong>上一篇：</strong><br/>
-  <span>
-  央视网商城移动端改版遇到的那些坑</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/01/08/my-first-post/"  title="新年寄语">
+<a href="/2016/03/08/css-3D-box/"  title="css 3D box">
  <strong>下一篇：</strong><br/> 
- <span>新年寄语
+ <span>css 3D box
 </span>
 </a>
 </div>
