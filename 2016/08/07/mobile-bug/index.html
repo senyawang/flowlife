@@ -15,7 +15,8 @@
 将fixed元素放在页面底部
 2，fixed footer 中有input  focus 时 位置发生变化
 focus时
-                $(&amp;apos;body,html&amp;apos;).css({&amp;apos;overflow&amp;apos;:&amp;apos;hidden&amp;ap">
+        $(&amp;apos;body,html&amp;apos;).css({
+            &amp;apos;overflow&amp;apos;:&amp;apos;hidd">
 <meta property="og:type" content="article">
 <meta property="og:title" content="央视网商城移动端改版遇到的那些坑">
 <meta property="og:url" content="http://flowlife.cn/flowlife/2016/08/07/mobile-bug/index.html">
@@ -24,15 +25,17 @@ focus时
 将fixed元素放在页面底部
 2，fixed footer 中有input  focus 时 位置发生变化
 focus时
-                $(&amp;apos;body,html&amp;apos;).css({&amp;apos;overflow&amp;apos;:&amp;apos;hidden&amp;ap">
-<meta property="og:updated_time" content="2016-08-07T09:14:18.000Z">
+        $(&amp;apos;body,html&amp;apos;).css({
+            &amp;apos;overflow&amp;apos;:&amp;apos;hidd">
+<meta property="og:updated_time" content="2016-08-07T09:19:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="央视网商城移动端改版遇到的那些坑">
 <meta name="twitter:description" content="1, fixed header 在页面滚动的时候会跟随页面一起滚动，到页面滚动停止之后，重新回到fixed的位置
 将fixed元素放在页面底部
 2，fixed footer 中有input  focus 时 位置发生变化
 focus时
-                $(&amp;apos;body,html&amp;apos;).css({&amp;apos;overflow&amp;apos;:&amp;apos;hidden&amp;ap">
+        $(&amp;apos;body,html&amp;apos;).css({
+            &amp;apos;overflow&amp;apos;:&amp;apos;hidd">
 
     
     <link rel="alternative" href="/atom.xml" title="令昔" type="application/atom+xml">
@@ -115,16 +118,24 @@ focus时
 <pre><code>将fixed元素放在页面底部
 </code></pre><p>2，fixed footer 中有input  focus 时 位置发生变化</p>
 <pre><code>focus时
-                $(&apos;body,html&apos;).css({&apos;overflow&apos;:&apos;hidden&apos;, &apos;position&apos;: &apos;relative&apos;, &apos;height&apos;: &apos;100%&apos;})
+        $(&apos;body,html&apos;).css({
+            &apos;overflow&apos;:&apos;hidden&apos;, 
+            &apos;position&apos;: &apos;relative&apos;, 
+            &apos;height&apos;: &apos;100%&apos;})
         $(&apos;.fixed-input&apos;).css({&apos;position&apos;:&apos;absolute&apos;})
 
 blur 时 再还原样式
 </code></pre><p>3，通讯录效果中字母索引   -webkit-overflow-scrolling: touch;  在 ios中滑动字母索引时造成页面显示空白的问题</p>
-<p>4，一些android 浏览器中  行内元素 设置 flex 无效<br>    给父元素设置 display: inline-flex;</p>
-<p>5, 页面初始化时无法自动调起输入法键盘， 可以通过 传说中的点透bug 来实现这个效果，但前提是input在同一位置</p>
-<p>6，-webkit-line-clamp 出现省略号时的文字块高度和不出现省略 号时的高度不同<br>    需要设置固定高度，但是由于在移动端字体大小适配的问题，使高度无法固定，所以用 em 为高度单位设置 height: calc(2em <em> 1.5 )  行数</em>行高  其实可以算出以em为单位的一个基准值  </p>
-<p>7, ios 下 给body设置padding-top 来为 fixed  navbar 占位，如果body 同时设置了 -webkit-overlfow-scrolling: touch,   此时body的paddingTop 的内容会覆盖在fixed元素上面遮挡住navbar</p>
-<pre><code>虽然 给body 设置transform: translate3d(0, 0, 0); 可以解决这个问题，但是 如果是在复杂的页面中，有可能会引起其它的诡异问题，所以最好的解决办法是把navbar 放在页面结构的底部。
+<p>4，一些android 浏览器中  行内元素 设置 flex 无效</p>
+<pre><code>给父元素设置 display: inline-flex;
+</code></pre><p>5, 页面初始化时无法自动调起输入法键盘， 可以通过 传说中的点透bug 来实现这个效果，但前提是input在同一位置</p>
+<p>6，-webkit-line-clamp 出现省略号时的文字块高度和不出现省略 号时的高度不同</p>
+<pre><code>需要设置固定高度，但是由于在移动端字体大小适配的问题，使高度无法固定，
+所以用 em 为高度单位设置 height: calc(2em * 1.5 )  行数*行高  其实可以算出以em为单位的一个基准值  
+</code></pre><p>7, ios 下 给body设置padding-top 来为 fixed  navbar 占位，如果body 同时设置了 -webkit-overlfow-scrolling: touch,   此时body的paddingTop 的内容会覆盖在fixed元素上面遮挡住navbar</p>
+<pre><code>虽然 给body 设置transform: translate3d(0, 0, 0); 可以解决这个问题，但是 如果是在复杂的页面中，
+有可能会引起其它的诡异问题，所以最好的解决办法是把navbar放在页面结构的底部。
+
 transform 下的元素 fixed 失效，所以才解决了上面的问题，操，，真你妈烦。
 </code></pre>  
 	</div>
